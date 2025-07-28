@@ -42,25 +42,77 @@ function initTheme() {
 }
 
 function updateThemeIcon(theme) {
-    const icon = themeToggle.querySelector('i');
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) {
+        console.log('Theme toggle element not found');
+        return;
+    }
+    
+    let icon = themeToggle.querySelector('i');
+    if (!icon) {
+        // Create icon if it doesn't exist
+        icon = document.createElement('i');
+        themeToggle.appendChild(icon);
+    }
+    
     if (theme === 'dark') {
         icon.className = 'fas fa-sun';
+        themeToggle.setAttribute('title', 'Switch to light mode');
+        // Fallback text if icons don't load
+        icon.setAttribute('data-fallback', '☀️');
     } else {
         icon.className = 'fas fa-moon';
+        themeToggle.setAttribute('title', 'Switch to dark mode');
+        // Fallback text if icons don't load
+        icon.setAttribute('data-fallback', '🌙');
     }
+    
+    // Check if Font Awesome loaded, if not use emoji fallback
+    setTimeout(() => {
+        const computed = window.getComputedStyle(icon, ':before');
+        if (computed.content === 'none' || computed.content === '') {
+            icon.innerHTML = icon.getAttribute('data-fallback');
+            icon.style.fontFamily = 'inherit';
+        }
+    }, 100);
 }
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
+function handleThemeToggle() {
+    console.log('Theme toggle clicked'); // Debug log
+    
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    console.log(`Switching from ${currentTheme} to ${newTheme}`); // Debug log
+    
+    // Add transition class for smooth theme change
+    document.documentElement.classList.add('theme-transitioning');
     
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
-});
+    
+    // Remove transition class after animation
+    setTimeout(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+    }, 300);
+}
+
+// Initialize theme toggle
+function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        console.log('Theme toggle found, adding event listener'); // Debug log
+        themeToggle.addEventListener('click', handleThemeToggle);
+        themeToggle.style.cursor = 'pointer'; // Ensure it's clickable
+    } else {
+        console.log('Theme toggle element not found!'); // Debug log
+    }
+}
 
 // Initialize theme on page load
 initTheme();
+initThemeToggle();
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
@@ -134,21 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Enhanced loading and performance optimizations
 document.addEventListener('DOMContentLoaded', function() {
-    // Hide preloader when everything is loaded
-    window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        if (preloader) {
-            setTimeout(() => {
-                preloader.classList.add('hidden');
-                setTimeout(() => {
-                    preloader.remove();
-                }, 500);
-            }, 500); // Small delay for smooth transition
-        }
-        
-        // Start entrance animations
-        startEntranceAnimations();
-    });
+    // No longer need to wait for window load - content is ready
+    startEntranceAnimations();
     
     // Performance optimization: Use passive listeners
     window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
@@ -304,21 +343,8 @@ const debouncedResizeHandler = debounce(handleResize, 100);
 
 // Enhanced theme toggle with smooth transition
 function enhancedThemeToggle() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    // Add transition class
-    document.documentElement.classList.add('theme-transitioning');
-    
-    // Change theme
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-    
-    // Remove transition class after animation
-    setTimeout(() => {
-        document.documentElement.classList.remove('theme-transitioning');
-    }, 300);
+    // This function is now handled by handleThemeToggle above
+    handleThemeToggle();
 }
 
 // Enhanced scroll to section
@@ -331,13 +357,6 @@ function scrollToSection(sectionId) {
 
 // Initialize enhanced functionality
 document.addEventListener('DOMContentLoaded', () => {
-    // Override default theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-        themeToggle.removeEventListener('click', () => {});
-        themeToggle.addEventListener('click', enhancedThemeToggle);
-    }
-    
     // Enhanced anchor link handling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
