@@ -5,63 +5,68 @@ const portfolioData = {
     // Personal Information
     personal: {
         name: "Ashish Kumar",
-        title: "Data Analyst & Business Intelligence Specialist",
-        description: "Transforming complex data into actionable insights that drive business growth and strategic decision-making.",
-        email: "ashish@example.com",
-        phone: "+91 XXX XXX XXXX",
-        location: "India",
+        title: "Incentive Compensation Analyst & Data Specialist",
+        description: "Transforming pharmaceutical and healthcare data into strategic insights. Specialized in incentive compensation modeling, analytics automation, and driving 80-90% efficiency improvements through innovative data solutions.",
+        email: "ashsuper18@gmail.com",
+        phone: "+91 9521873768",
+        location: "Hyderabad, India",
         linkedin: "https://www.linkedin.com/in/ashishk123/",
-        github: "https://github.com/ashishk123",
+        github: "https://github.com/ashsuper18",
         resumeFile: "./Ashish Kumar Data Analyst Resume_v2.pdf",
-        profileImage: "https://via.placeholder.com/400x500/4f46e5/ffffff?text=Your+Photo"
+        profileImage: "./profile-photo.jpeg"  // Replace with your actual photo filename
     },
 
     // About Section
     about: {
         description: [
-            "I'm a dedicated Data Analyst with expertise in transforming complex datasets into meaningful business insights. With a strong foundation in statistical analysis, data visualization, and business intelligence tools, I help organizations make data-driven decisions that drive growth and efficiency.",
-            "My experience spans across various industries, where I've successfully implemented analytics solutions, created interactive dashboards, and presented findings to stakeholders at all levels."
+            "I'm a results-driven Data Analyst with 3+ years of experience in pharmaceutical and healthcare industries, specializing in incentive compensation modeling and analytics automation. Currently working at Sanofi, I've successfully built tools that reduce manual processing by 80-90% while improving accuracy and compliance.",
+            "My expertise spans across Python automation, Power BI dashboards, advanced analytics, and stakeholder collaboration. I've delivered measurable business impact including 20% increases in product sales and significant improvements in web engagement through data-driven insights."
         ],
         stats: [
             { number: "3+", label: "Years Experience" },
-            { number: "50+", label: "Projects Completed" },
-            { number: "10+", label: "Tools Mastered" }
+            { number: "80-90%", label: "Efficiency Gains" },
+            { number: "20%", label: "Sales Impact" }
         ]
     },
 
     // Experience Timeline
     experience: [
         {
-            title: "Senior Data Analyst",
-            company: "Tech Company",
-            duration: "2023 - Present",
-            description: "Leading data analysis initiatives for business intelligence and strategic planning. Developed automated reporting systems that reduced manual work by 70%.",
+            title: "Incentive Compensation Analyst",
+            company: "Sanofi (Pharmaceutical Industry)",
+            duration: "Apr 2025 - Present",
+            description: "Leading IC automation initiatives and stakeholder collaboration to ensure accurate compensation calculations and compliance-ready processes for one of the world's largest pharmaceutical companies.",
             responsibilities: [
-                "Created executive dashboards using Power BI and Tableau",
-                "Implemented predictive models for customer behavior analysis",
-                "Led cross-functional teams to drive data-driven decision making"
+                "Created automated Python tools to simplify IC calculations and reduce manual processing time",
+                "Manage monthly and quarterly IC reports, collaborating with stakeholders for accurate delivery",
+                "Designed custom IC models based on dynamic KPIs, enabling accurate payout alignment",
+                "Built dashboards using Power BI, improving performance visibility and executive decision-making",
+                "Ensured compliance-ready processes by maintaining audit documentation and workflows"
             ]
         },
         {
             title: "Data Analyst",
-            company: "Previous Company",
-            duration: "2021 - 2023",
-            description: "Analyzed customer data to identify trends and opportunities for business growth. Collaborated with marketing and sales teams to optimize campaigns.",
+            company: "Indegene (Healthcare Industry)",
+            duration: "Jun 2022 - Mar 2025",
+            description: "Delivered high-impact analytics solutions for major pharmaceutical clients, driving significant business growth through data-driven insights and automation tools.",
             responsibilities: [
-                "Performed statistical analysis on large datasets",
-                "Created data visualizations for stakeholder presentations",
-                "Improved data quality processes and documentation"
+                "Built custom Incentive Calculation Tool using Power BI and Excel, cutting manual effort by 80-90%",
+                "Delivered GA4/GAU-based digital insights that boosted web traffic by 20% and engagement by 15%",
+                "Led HCP segmentation and territory alignment contributing to 20% increase in product sales",
+                "Engineered Python data integration scripts (fuzzy match, cosine similarity) for cleaner analytics",
+                "Designed interactive dashboards using Power BI and IQVIA data for strategic reporting",
+                "Supported top pharma clients like Johnson & Johnson, Azurity, and Alcon on data initiatives"
             ]
         },
         {
-            title: "Junior Data Analyst",
-            company: "First Company",
-            duration: "2020 - 2021",
-            description: "Started my analytics journey by supporting senior analysts with data collection, cleaning, and basic analysis tasks.",
+            title: "Consulting Intern",
+            company: "Highradius",
+            duration: "2021 - 2022",
+            description: "Collaborated on backend automation solutions for client payment processes, gaining hands-on experience in end-to-end solution design and validation.",
             responsibilities: [
-                "Learned SQL, Python, and Excel for data analysis",
-                "Assisted in creating monthly and quarterly reports",
-                "Developed strong foundation in data visualization tools"
+                "Collaborated on backend automation for client payment processes",
+                "Contributed to end-to-end solution design and validation",
+                "Gained foundational experience in enterprise-level data solutions"
             ]
         }
     ],
@@ -69,26 +74,50 @@ const portfolioData = {
     // Projects
     projects: [
         {
-            title: "Sales Performance Dashboard",
-            description: "Interactive Power BI dashboard analyzing sales trends, customer segments, and revenue forecasting with real-time data integration.",
-            image: "https://via.placeholder.com/400x250/4f46e5/ffffff?text=Sales+Dashboard",
-            technologies: ["Power BI", "SQL", "Python"],
+            title: "Incentive Calculation Tool",
+            description: "Custom Power BI and Excel-based tool that revolutionized IC processing for pharmaceutical clients, achieving 80-90% reduction in manual effort while improving payout accuracy and compliance.",
+            image: "https://via.placeholder.com/400x250/4f46e5/ffffff?text=IC+Tool",
+            technologies: ["Power BI", "Excel", "Python", "VBA"],
             liveUrl: "#",
             githubUrl: "#"
         },
         {
-            title: "Customer Behavior Analysis",
-            description: "Machine learning model to predict customer churn and identify high-value customers using advanced analytics techniques.",
-            image: "https://via.placeholder.com/400x250/10b981/ffffff?text=Customer+Analytics",
-            technologies: ["Python", "Sklearn", "Tableau"],
+            title: "HCP Segmentation & Territory Alignment",
+            description: "Advanced analytics project for major US pharma client using machine learning and statistical modeling, contributing to 20% increase in product sales through optimized territory strategies.",
+            image: "https://via.placeholder.com/400x250/10b981/ffffff?text=HCP+Analytics",
+            technologies: ["Python", "Power BI", "IQVIA", "ML"],
             liveUrl: "#",
             githubUrl: "#"
         },
         {
-            title: "Financial Risk Assessment",
-            description: "Comprehensive analysis of financial portfolios with risk modeling and automated reporting for investment decisions.",
-            image: "https://via.placeholder.com/400x250/f59e0b/ffffff?text=Financial+Analysis",
-            technologies: ["R", "Excel", "VBA"],
+            title: "Digital Insights Dashboard (GA4/GAU)",
+            description: "Comprehensive web analytics solution that boosted client web traffic by 20% and engagement by 15% through actionable insights and strategic recommendations.",
+            image: "https://via.placeholder.com/400x250/f59e0b/ffffff?text=Digital+Analytics",
+            technologies: ["GA4", "GAU", "Power BI", "Python"],
+            liveUrl: "#",
+            githubUrl: "#"
+        },
+        {
+            title: "US State Quiz - Python Game",
+            description: "Interactive Python-based educational game using Turtle and Pandas libraries to test users' knowledge of US states with engaging visual interface and data tracking.",
+            image: "https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Python+Game",
+            technologies: ["Python", "Turtle", "Pandas"],
+            liveUrl: "#",
+            githubUrl: "#"
+        },
+        {
+            title: "Drum Kit Website",
+            description: "Fun JavaScript-based interactive drum kit website with user behavior tracking and engagement analytics to understand user interaction patterns and preferences.",
+            image: "https://via.placeholder.com/400x250/ec4899/ffffff?text=Drum+Kit",
+            technologies: ["JavaScript", "HTML", "CSS", "Analytics"],
+            liveUrl: "#",
+            githubUrl: "#"
+        },
+        {
+            title: "Data Integration Scripts",
+            description: "Advanced Python scripts using fuzzy matching and cosine similarity algorithms for integrating unmatched datasets, enabling cleaner analytics and improved data quality.",
+            image: "https://via.placeholder.com/400x250/06b6d4/ffffff?text=Data+Integration",
+            technologies: ["Python", "Fuzzy Logic", "NLP", "Data Science"],
             liveUrl: "#",
             githubUrl: "#"
         }
@@ -96,31 +125,104 @@ const portfolioData = {
 
     // Skills organized by categories
     skills: {
-        "Programming Languages": [
+        "Programming & Analytics": [
             { name: "Python", icon: "fab fa-python" },
             { name: "SQL", icon: "fas fa-database" },
-            { name: "R", icon: "fab fa-r-project" },
-            { name: "VBA", icon: "fas fa-file-excel" }
+            { name: "Excel", icon: "fas fa-file-excel" },
+            { name: "Power Query", icon: "fas fa-cogs" }
         ],
-        "Data Visualization": [
-            { name: "Tableau", icon: "fas fa-chart-bar" },
+        "Business Intelligence": [
             { name: "Power BI", icon: "fas fa-chart-line" },
-            { name: "Matplotlib", icon: "fab fa-python" },
-            { name: "Seaborn", icon: "fas fa-chart-pie" }
+            { name: "GA4", icon: "fab fa-google" },
+            { name: "GAU", icon: "fas fa-chart-bar" },
+            { name: "IQVIA", icon: "fas fa-chart-pie" }
         ],
-        "Databases & Tools": [
-            { name: "MySQL", icon: "fas fa-database" },
-            { name: "PostgreSQL", icon: "fas fa-server" },
-            { name: "Excel", icon: "fab fa-microsoft" },
-            { name: "Git", icon: "fab fa-git-alt" }
+        "Development & Tools": [
+            { name: "GitHub", icon: "fab fa-github" },
+            { name: "VBA", icon: "fas fa-code" },
+            { name: "JavaScript", icon: "fab fa-js" },
+            { name: "AI Tools", icon: "fas fa-robot" }
         ],
-        "Machine Learning": [
-            { name: "Scikit-learn", icon: "fas fa-brain" },
-            { name: "Pandas", icon: "fas fa-robot" },
-            { name: "NumPy", icon: "fas fa-calculator" },
-            { name: "TensorFlow", icon: "fas fa-chart-area" }
+        "Specialized Skills": [
+            { name: "Incentive Compensation", icon: "fas fa-calculator" },
+            { name: "HCP Segmentation", icon: "fas fa-users" },
+            { name: "Data Integration", icon: "fas fa-project-diagram" },
+            { name: "Automation", icon: "fas fa-bolt" }
+        ],
+        "Soft Skills": [
+            { name: "Problem Solving", icon: "fas fa-lightbulb" },
+            { name: "Stakeholder Management", icon: "fas fa-handshake" },
+            { name: "Project Planning", icon: "fas fa-tasks" },
+            { name: "Cross-Team Collaboration", icon: "fas fa-people-arrows" }
         ]
     },
+
+    // Education Section
+    education: [
+        {
+            degree: "B.Tech - Electronics & Communication Engineering",
+            institution: "SRM Institute of Science and Technology",
+            location: "Chennai, India",
+            duration: "2018 - 2022",
+            gpa: "8.4/10",
+            description: "Strong foundation in engineering principles, data analysis, and problem-solving methodologies."
+        },
+        {
+            degree: "Intermediate",
+            institution: "St. Joseph's International School",
+            location: "India",
+            duration: "2016 - 2018",
+            gpa: "8.0/10",
+            description: "Focused on mathematics, science, and analytical thinking."
+        },
+        {
+            degree: "Secondary School",
+            institution: "Kendriya Vidyalaya",
+            location: "India",
+            duration: "2014 - 2016",
+            gpa: "9.2/10",
+            description: "Excellent academic performance with strong fundamentals."
+        }
+    ],
+
+    // Certifications Section
+    certifications: [
+        {
+            name: "Python for Data Science and AI",
+            issuer: "IBM",
+            date: "2023",
+            icon: "fab fa-python",
+            description: "Advanced Python programming for data science applications"
+        },
+        {
+            name: "Databases and SQL for Data Science",
+            issuer: "IBM", 
+            date: "2023",
+            icon: "fas fa-database",
+            description: "Database management and SQL optimization techniques"
+        },
+        {
+            name: "Tools for Data Science",
+            issuer: "IBM",
+            date: "2023", 
+            icon: "fas fa-tools",
+            description: "Comprehensive toolkit for data science workflows"
+        },
+        {
+            name: "Google Universal Analytics Essential Training",
+            issuer: "LinkedIn Learning",
+            date: "2023",
+            icon: "fab fa-google",
+            description: "Web analytics and user behavior analysis"
+        },
+        {
+            name: "Advanced Google Analytics",
+            issuer: "LinkedIn Learning", 
+            date: "2023",
+            icon: "fas fa-chart-line",
+            description: "Advanced analytics techniques and implementation"
+        }
+    ],
 
     // Navigation Menu
     navigation: [
@@ -134,9 +236,9 @@ const portfolioData = {
 
     // Hero floating cards
     heroCards: [
-        { icon: "fas fa-chart-line", text: "Analytics" },
-        { icon: "fas fa-database", text: "Big Data" },
-        { icon: "fas fa-chart-pie", text: "Visualization" }
+        { icon: "fas fa-calculator", text: "IC Analytics" },
+        { icon: "fas fa-chart-line", text: "Power BI" },
+        { icon: "fab fa-python", text: "Python" }
     ]
 };
 
