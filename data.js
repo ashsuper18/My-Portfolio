@@ -271,7 +271,7 @@ function populatePortfolio() {
 
 function populateNavigation() {
     const navMenu = document.getElementById('nav-menu');
-    const logoElement = document.querySelector('.nav-logo span');
+    const logoElement = document.getElementById('nav-name');
     
     if (logoElement) {
         logoElement.textContent = portfolioData.personal.name;
@@ -464,6 +464,15 @@ function populateContact() {
 }
 
 function updateSocialLinks() {
+    const linkedinLink = document.querySelector('.linkedin-link');
+    const githubLink = document.querySelector('.github-link');
+    const emailLink = document.querySelector('.email-link');
+    
+    if (linkedinLink) linkedinLink.href = portfolioData.personal.linkedin;
+    if (githubLink) githubLink.href = portfolioData.personal.github;
+    if (emailLink) emailLink.href = `mailto:${portfolioData.personal.email}`;
+    
+    // Also update any other social links in footer or contact sections
     const socialLinks = document.querySelectorAll('.social-link');
     const socialData = [
         { href: portfolioData.personal.linkedin, icon: 'fab fa-linkedin' },
@@ -472,7 +481,7 @@ function updateSocialLinks() {
     ];
     
     socialLinks.forEach((link, index) => {
-        if (socialData[index]) {
+        if (socialData[index] && !link.classList.contains('linkedin-link') && !link.classList.contains('github-link') && !link.classList.contains('email-link')) {
             link.href = socialData[index].href;
             const icon = link.querySelector('i');
             if (icon) icon.className = socialData[index].icon;
